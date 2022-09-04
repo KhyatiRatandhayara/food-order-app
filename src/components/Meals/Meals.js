@@ -1,11 +1,12 @@
+import { Fragment } from "react";
 import { AvailableMeals } from "./AvailableMeals";
 import { MealsSummary } from "./MealsSummary";
 
 export const Meals = () => {
   return (
-    <>
-      <AvailableMeals />
+    <Fragment>
       <MealsSummary />
-    </>
+      <AvailableMeals />
+    </Fragment>
   );
 };

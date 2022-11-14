@@ -11,7 +11,7 @@ export const Cart = (props) => {
  const totalItemsAmount = `$${cartCtx.totalAmount.toFixed(2)}`
 
  const addToCartHandler = item => {
-  cartCtx.addItem(item);
+  cartCtx.addItem({ ...item, amount: 1 });
  }
  
   const removeFromCartHandler = id => {

@@ -1,6 +1,7 @@
 import { Card } from "../UI/Card";
 import classes from "./AvailableMeals.module.css";
 import { MealItem } from "./MealItem/MealItem";
+import ExportExcel from "../../ExcelExport";
 
 const DUMMY_MEALS = [
   {
@@ -38,12 +39,16 @@ export const AvailableMeals = () => {
       description={meal.description}
       price={meal.price}
     />
+
   ));
   return (
+    <>
     <section className={classes.meals}>
       <Card>
         <ul>{mealsList}</ul>
       </Card>
     </section>
+    <ExportExcel excelData={DUMMY_MEALS} fileName={"excel export"}/>
+    </>
   );
 };

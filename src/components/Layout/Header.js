@@ -2,7 +2,10 @@ import classes from "./Header.module.css";
 import reactMeals from "../../assets/reactmeals.jpg";
 import { HeaderCartButton } from "./HeaderCartButton";
 
-export const Header = (props) => {
+const Header = (props) => {
+  if(!props.warn){
+    return null;
+  }
   return (
     <>
       <header className={classes.header}>
@@ -15,3 +18,5 @@ export const Header = (props) => {
     </>
   );
 };
+export default Header;
+

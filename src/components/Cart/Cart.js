@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "../../store/cart-context";
 import CartItem from "./CartItem";
 
-export const Cart = (props) => {
+ const Cart = (props) => {
 
  const cartCtx =  useContext(CartContext);
  const hasItems = cartCtx.items.length>0;
@@ -41,3 +41,5 @@ export const Cart = (props) => {
     </Modal>
   );
 };
+
+export default Cart;
